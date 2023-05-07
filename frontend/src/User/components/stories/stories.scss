@@ -1,0 +1,119 @@
+@import "../../style.scss";
+
+.stories {
+  display: flex;
+  gap: 10px;
+  height: 250px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  z-index: 10;
+
+  @include mobile {
+    height: 50px;
+    margin-bottom: 0;
+    justify-content: space-between;
+  }
+
+  @include tablet {
+    height: 150px;
+    gap: 20px;
+  }
+
+  .story {
+    flex: 1;
+    max-width: 169px;
+    border-radius: 10px;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: #09e535; /* Add background color */
+    transition: background-color 0.3s ease-in-out; /* Add transition effect for hover */
+
+
+    @include mobile {
+      flex: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    span {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      font-weight: 500;
+      @include mobile {
+        display: none;
+
+      }
+     
+    }
+    
+
+    button {
+      position: absolute;
+      bottom: 40px;
+      left: 10px;
+      color: white;
+      background-color: #5271ff;
+      border: none;
+      border-radius: 50%;
+      width: 40px; /* Increase button size */
+      height: 40px; /* Increase button size */
+      cursor: pointer;
+      font-size: 24px; /* Reduce font size */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease-in-out; /* Add transition effect for hover */
+
+      @include mobile {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      &:hover {
+        background-color: darken(#5271ff, 10%); /* Add hover effect */
+      }
+    }
+    .photo{
+      height: 90%;
+      background-color: aqua;
+
+
+    }
+    
+  }
+  .name{
+      
+    background: rgb(41 9 9 / 68%);
+    margin-left: -40px;
+    height: 10%;
+    text-align: center;
+    /* padding: 8px; */
+    padding-bottom: 47px;
+    padding-left: 60px;
+    color: black;
+    z-index: 1;
+    position: absolute;
+    margin-top: -49px;
+    color: rgb(255 255 255);
+    margin-right: -143px;
+    padding-right: 33px;
+}
+   
+    
+
+
+}
+

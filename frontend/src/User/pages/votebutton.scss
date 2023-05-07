@@ -1,0 +1,42 @@
+
+.Container{
+    height: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+.votebutton {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background:rgb(66, 37, 37);
+    //  linear-gradient(to bottom, #ffffff, #f1f1f1); /* Background design */
+    border-radius: 50px; /* Border radius for the div element */
+    padding: 10px; /* Add padding to the div element to create some space around the buttons */
+    h1{
+        color: white;
+      }
+    button {
+      height: 100px;
+      width: 200px;
+      font-size: x-large;
+      background-color: #333;
+      color: lightblue;
+      border: none;
+      border-radius: 5px; /* Border radius for the button element */
+      transition: all 0.3s ease;
+     
+      &:hover {
+        background-color: #555;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}

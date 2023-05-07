@@ -1,0 +1,121 @@
+@import "../style.scss";
+
+.complaints {
+
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include themify($themes) {
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .write {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 25px;
+      margin: 25px 0px;
+
+      input {
+        flex: 5;
+        padding: 10px;
+        border: 1px solid themed("border");
+        background-color: transparent;
+        color: themed("textColor");
+        border-radius: 15px;
+        /* Added box shadow for a raised effect */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        /* Transitions for smoother hover effect */
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      
+      /* Hover effect to change border color */
+      input:hover {
+        border-color: themed("hoverBorder");
+      }
+      
+      /* Focus effect to add box shadow */
+      input:focus {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+
+      button {
+        border: none;
+        background-color: #5271ff;
+        color: white;
+        padding: 6px 12px; /* Reduced padding for smaller size */
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+        font-size: 14px; /* Reduced font size for smaller size */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        outline: none;
+      }
+      
+      button:hover {
+        background-color: #4161e6;
+      }
+      
+      button:active {
+        transform: translateY(1px);
+      }
+      
+      
+    }
+
+    .complaint {
+      margin: 30px 0px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      .info {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        align-items: flex-start;
+
+        span {
+          font-weight: 500;
+        }
+
+        p {
+          color: themed("textColorSoft");
+        }
+      }
+
+      .date {
+        flex: 1;
+        align-self: center;
+        color: gray;
+        font-size: 12px;
+      }
+    }
+    
+  }
+  @include themify($themes) {
+    padding: 20px 70px;
+    background-color: themed("bgSoft");
+
+    @include mobile {
+      padding: 10px;
+    }
+
+    @include tablet{
+      padding: 20px;
+    }
+  }
+
+}
